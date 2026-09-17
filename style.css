@@ -1688,3 +1688,247 @@ body::before {
         border-radius: 20px;
     }
 }
+/* =================================
+   💗 PREMIUM MEMORIES GALLERY
+   ================================= */
+
+.photo-slideshow {
+    position: relative;
+    width: 94%;
+    max-width: 650px;
+    margin: 30px auto;
+    text-align: center;
+    z-index: 2;
+}
+
+/* BIG CENTER PHOTO */
+.photo-slideshow img {
+    display: block;
+    width: 100%;
+    max-height: 620px;
+    object-fit: contain;
+    margin: 0 auto;
+
+    border-radius: 24px;
+    border: 2px solid rgba(255, 150, 180, 0.8);
+
+    box-shadow:
+        0 0 15px rgba(255, 90, 140, 0.35),
+        0 15px 40px rgba(0,0,0,0.55);
+
+    transition: opacity 0.5s ease,
+                transform 0.4s ease;
+}
+
+/* PHOTO FADE */
+.photo-slideshow img.fade-out {
+    opacity: 0;
+    transform: scale(0.97);
+}
+
+/* LEFT + RIGHT ARROWS */
+.photo-arrow {
+    position: absolute;
+
+    top: 45%;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: rgba(20, 10, 20, 0.8);
+
+    border: 2px solid #ff91b5;
+
+    color: #ffb4ca;
+
+    font-size: 38px;
+    line-height: 42px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 0 12px rgba(255, 100, 150, 0.5);
+
+    transition: 0.3s;
+}
+
+.photo-arrow:hover {
+    transform: scale(1.12);
+    background: #ff91b5;
+    color: #111;
+}
+
+.left-arrow {
+    left: -25px;
+}
+
+.right-arrow {
+    right: -25px;
+}
+
+/* PHOTO NUMBER */
+.slide-number {
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: #fff;
+
+    letter-spacing: 2px;
+}
+
+/* CAPTION */
+#memoryCaption {
+    margin: 12px auto 20px;
+
+    font-size: 20px;
+
+    color: #fff;
+
+    max-width: 90%;
+}
+
+/* CHANGE PHOTO BUTTON */
+.change-photo-btn {
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #ff8faf,
+        #ffb6c9
+    );
+
+    color: #151015;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px rgba(255, 100, 150, 0.35);
+
+    transition: 0.3s;
+}
+
+.change-photo-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+
+/* =================================
+   💕 BACKGROUND HEARTS
+   ================================= */
+
+.memoriesPage {
+    position: relative;
+    overflow: hidden;
+}
+
+/* floating hearts */
+.memoriesPage::before {
+    content:
+        "♡   ♥   ♡   ♥   ♡   ♥   ♡";
+
+    position: absolute;
+
+    top: 8%;
+    left: 0;
+
+    width: 100%;
+
+    color: rgba(255, 100, 150, 0.35);
+
+    font-size: 30px;
+
+    letter-spacing: 25px;
+
+    animation: floatingHearts 7s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.memoriesPage::after {
+    content:
+        "♥     ♡       ♥      ♡";
+
+    position: absolute;
+
+    bottom: 5%;
+    left: 0;
+
+    width: 100%;
+
+    color: rgba(255, 120, 170, 0.28);
+
+    font-size: 45px;
+
+    letter-spacing: 30px;
+
+    animation: floatingHearts 9s ease-in-out infinite reverse;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+@keyframes floatingHearts {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    .photo-slideshow {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .photo-slideshow img {
+        width: 100%;
+        max-height: 560px;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    .photo-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 32px;
+    }
+
+    .left-arrow {
+        left: -18px;
+    }
+
+    .right-arrow {
+        right: -18px;
+    }
+
+    #memoryCaption {
+        font-size: 18px;
+    }
+}
