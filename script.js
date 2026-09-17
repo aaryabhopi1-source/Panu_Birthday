@@ -469,9 +469,7 @@ function popBalloon(balloon, message) {
 const photoList = [];
 
 for (let i = 1; i <= 16; i++) {
-    photoList.push(
-        `images/${i}.jpeg`
-    );
+    photoList.push(`${i}.jpeg`);
 }
 
 let currentSlide = 0;
