@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+                   maximum-scale=1.0, user-scalable=no">
+
+    <title>Happy Birthday Panu ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="music.mpeg" type="audio/mpeg">
+    </audio>
+
+
+    <!-- GLOWING PARTICLES -->
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         PAGE 1 — LETTER
+    ========================== -->
+
+    <section class="page active" id="letterPage">
+
+        <div class="top-bar">
+            <button class="back-btn">← Back</button>
+        </div>
+
+        <h1>A Letter Just For You 💌</h1>
+
+        <div class="letter-card">
+
+            <p class="letter-greeting">
+                Happy Birthday, My Panu! ❤️🎂,
+            </p>
+
+            <p>
+                Today is very special because it’s your birthday, and you are one of the most
+                important people in my life. 🥹❤️ तू माझ्यासाठी फक्त नवरा नाहीस, तू माझं happiness, 
+                माझं comfort आणि माझ्या आयुष्यातला खूप सुंदर भाग आहेस.
+            </p>
+
+            <p>
+                Thank you for always being there for me, मला समजून घेण्यासाठी, माझ्या छोट्या
+                छोट्या गोष्टींची काळजी घेण्यासाठी आणि नेहमी मला smile करण्याचं कारण दिल्याबद्दल. ❤️
+            </p>
+
+            <p>
+                I wish you lots of happiness, success and peace.तुझी प्रत्येक
+                dream पूर्ण होवो आणि आयुष्यात तुला हवं ते सगळं मिळो. ✨
+            </p>
+
+            <p>
+                I love you so much, Panda.🥹❤️तू माझ्या आयुष्यात आहेस, 
+                हीच माझ्यासाठी सगळ्यात beautiful गोष्ट आहे. आज, 
+                उद्या आणि नेहमीच मला तुझ्यासोबत राहायचं आहे. ❤️
+            </p>
+
+            <p>
+                Happy Birthday, Panu.
+                I hope हे छोटेस surprise तुझा 
+                face वर smile आणेल 💗😊🫂♾️
+                I Love You Panda 🐼❤️♾️
+            </p>
+
+        </div>
+
+        <button class="watch-btn" onclick="goToPage('envelopePage')">
+            ✉ Watch Again
+        </button>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 2 — ENVELOPE
+    ========================== -->
+
+    <section class="page" id="envelopePage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('letterPage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>A Letter Just For You 💌</h1>
+
+        <div class="envelope-container"
+             onclick="openEnvelope()">
+
+            <div class="envelope">
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-paper">
+                    💌
+                </div>
+
+                <div class="envelope-heart">
+                    ♥
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="tap-text">
+            Tap to open 💌
+        </p>
+
+        <button class="watch-btn">
+            ✉ Watch Again
+        </button>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 3 — BIRTHDAY
+    ========================== -->
+
+    <section class="page" id="birthdayPage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('envelopePage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>
+            Happy Birthday<br>
+            <span class="yellow">Panuuu ❤️</span>
+        </h1>
+
+        <p class="small-heading">
+            The World Has Been Better Since
+            You Came Into My Life ❤️
+        </p>
+
+        <div class="age-box">
+
+            <div>
+                <strong>25</strong>
+                <span>YEARS</span>
+            </div>
+
+            <div>
+                <strong>7304</strong>
+                <span>DAYS</span>
+            </div>
+
+            <div>
+                <strong>175,314</strong>
+                <span>HOURS</span>
+            </div>
+
+            <div>
+                <strong>10,518,870</strong>
+                <span>MINUTES</span>
+            </div>
+
+        </div>
+
+
+        <div class="cake">
+
+            <div class="cake-number">
+                25
+            </div>
+
+            <div class="cake-layer layer1"></div>
+
+            <div class="cake-layer layer2"></div>
+
+            <div class="cake-layer layer3"></div>
+
+            <div class="candle">
+
+                <div class="flame">
+            🔥
+                </div>
+
+                <div class="candle-stick"></div>
+
+            </div>
+
+        </div>
+
+
+        <p class="wish-text">
+            Make a wish... 🕯️
+        </p>
+
+        <button class="highlight-btn" 
+            onclick="makeWish()">
+                ✨ Make a Wish
+        </button>
+
+        <button class="main-btn"
+            onclick="goToPage('memoryGamePage')">
+            Play Memory Match 💐
+        </button>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 4 — MEMORY MATCH
+    ========================== -->
+
+    <section class="page" id="memoryGamePage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('birthdayPage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>Memory Match 💐</h1>
+
+        <p class="small-heading">
+            Find all the matching pairs ✨
+        </p>
+
+        <div class="memory-grid">
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                🎂
+            </button>
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                ✨
+            </button>
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                💕
+            </button>
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                💕
+            </button>
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                🎂
+            </button>
+
+            <button class="memory-card"
+                    onclick="flipCard(this)">
+                ✨
+            </button>
+
+        </div>
+
+        <p class="moves">
+            2 moves
+        </p>
+
+        <button class="shuffle-btn"
+                onclick="shuffleCards()">
+            ⤨ Shuffle Again
+        </button>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 5 — SURPRISE GIFT
+    ========================== -->
+
+    <section class="page" id="giftPage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('memoryGamePage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>
+            A surprise awaits you... ✨
+        </h1>
+
+        <p class="small-heading">
+            Something special just for you ❤️
+        </p>
+
+
+        <div class="gift-box"
+             onclick="openGift()">
+
+            <div class="gift-glow">
+                ✨
+            </div>
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-body">
+
+                <div class="gift-ribbon vertical"></div>
+
+                <div class="gift-ribbon horizontal"></div>
+
+            </div>
+
+        </div>
+
+
+        <p class="tap-text">
+            Tap the gift to open 🎁
+        </p>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 6 — BALLOONS
+    ========================== -->
+
+    <section class="page" id="wishesPage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('giftPage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>
+            Pop the Wishes 🎈
+        </h1>
+
+        <p class="small-heading">
+            Tap each balloon to reveal a little wish
+        </p>
+
+
+        <div class="balloons">
+
+            <button class="balloon pink"
+                onclick="popBalloon(this, 'You deserve all the happiness in the world. ❤️')">
+                🎈
+            </button>
+
+            <button class="balloon yellow-balloon"
+                onclick="popBalloon(this, 'May every dream of yours come true. ✨')">
+                🎈
+            </button>
+
+            <button class="balloon blue"
+                onclick="popBalloon(this, 'Keep smiling just the way you do. 😊')">
+                🎈
+            </button>
+
+            <button class="balloon purple"
+                onclick="popBalloon(this, 'May this year bring you beautiful memories. 💕')">
+                🎈
+            </button>
+
+            <button class="balloon green"
+                onclick="popBalloon(this, 'You are truly special to me. 🫶🏻')">
+                🎈
+            </button>
+
+            <button class="balloon pink"
+                onclick="popBalloon(this, 'Happy Birthday, my Panu! ❤️🎂')">
+                🎈
+            </button>
+
+        </div>
+
+    <div id="wishMessage" class="wish-message"></div>
+
+
+
+        <p class="popped">
+            Popped 0/6
+        </p>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 7 — MEMORIES
+    ========================== -->
+
+    <section class="page" id="memoriesPage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('birthdayPage')">
+                ← Back
+            </button>
+        </div>
+
+        <h1>
+            Our Memories 🌸
+        </h1>
+
+        <p class="small-heading">
+            Every picture tells our story ❤️
+        </p>
+
+
+        <div class="photo-gallery">
+
+<div class="photo-slideshow">
+
+    <img id="slideshowImage"
+         src="images/1.jpeg"
+         alt="Our Memory">
+
+    <div class="slide-number">
+        <span id="currentPhoto">1</span> / 16
+    </div>
+
+    <p id="memoryCaption">
+        Your beautiful Memories ❤️
+    </p>
+
+</div>
+
+        </div>
+
+
+        <button class="main-btn"
+                onclick="goToPage('finalPage')">
+            One Last Surprise 💌
+        </button>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 8 — FINAL
+    ========================== -->
+
+    <section class="page" id="finalPage">
+
+        <div class="top-bar">
+            <button class="back-btn"
+                    onclick="goToPage('memoriesPage')">
+                ← Back
+            </button>
+        </div>
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <h1>
+            Happy Birthday,<br>
+            <span class="yellow">
+                Panu ❤️
+            </span>
+        </h1>
+
+        <div class="final-message">
+
+            <p>
+                Thank you for being such a beautiful part of my life. ❤️
+            </p>
+
+            <p>
+                तुझ्यासोबतचा प्रत्येक moment माझ्यासाठी खूप special आहे.
+                तू माझ्या life मध्ये आलास आणि simple moments सुद्धा
+                beautiful memories झाले. 🥹❤️
+            </p>
+
+            <p>
+                I may not say it every day, but you truly mean so much to me.
+                तुझं smile, तुझी care आणि तुझ्यासोबत असण्याची feeling —
+                माझ्यासाठी सगळंच precious आहे. 🫶🏻
+            </p>
+
+            <p>
+                I hope this new year of your life brings you endless happiness,
+                success and everything you've ever wished for. ✨
+            </p>
+
+            <p>
+                आयुष्यात कितीही chapters आले तरी,
+                I just want more beautiful memories with you. ❤️
+            </p>
+
+            <h2>
+                You are not just a part of my story,
+                <br>
+                you are one of my favourite chapters. ❤️
+            </h2>
+
+            <h3>
+                Forever & Always, Panu. 🐼❤️
+            </h3>
+
+        </div>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
