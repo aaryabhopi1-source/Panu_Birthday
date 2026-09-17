@@ -1658,3 +1658,33 @@ body::before {
     border-radius: 50%;
     z-index: -1;
 }
+/* 📸 Bigger Memories Photo - Mobile */
+.photo-slideshow {
+    width: 92%;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.photo-slideshow img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .photo-slideshow {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .photo-slideshow img {
+        width: 100%;
+        max-height: 560px;
+        border-radius: 20px;
+    }
+}
