@@ -102,33 +102,113 @@ let cakeStarted = false;
 let candleOff = false;
 
 
+/* =========================================
+   🎂 PREMIUM CAKE ANIMATION
+   ========================================= */
+
 function startCakeAnimation() {
-
-    if (cakeStarted) return;
-
-    cakeStarted = true;
 
     const cake = document.querySelector(".cake");
 
     if (!cake) return;
 
-    cake.classList.add("cake-start");
+    // Reset cake
+    cake.classList.remove(
+        "layer-one",
+        "layer-two",
+        "layer-three",
+        "show-candle",
+        "candle-off"
+    );
 
+    // Layer 1
     setTimeout(() => {
         cake.classList.add("layer-one");
-    }, 400);
+    }, 300);
 
+    // Layer 2
     setTimeout(() => {
         cake.classList.add("layer-two");
-    }, 1400);
+    }, 1200);
 
+    // Layer 3
     setTimeout(() => {
         cake.classList.add("layer-three");
-    }, 2400);
+    }, 2100);
 
+    // Candle
     setTimeout(() => {
         cake.classList.add("show-candle");
-    }, 3400);
+    }, 3000);
+
+    // Golden sparkle effect
+    setTimeout(() => {
+        createCakeSparkles();
+    }, 3300);
+}
+
+
+/* ✨ Cake Sparkles */
+
+function createCakeSparkles() {
+
+    const cake = document.querySelector(".cake");
+
+    if (!cake) return;
+
+    for (let i = 0; i < 18; i++) {
+
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "cake-sparkle";
+
+        sparkle.innerHTML =
+            i % 2 === 0 ? "✦" : "•";
+
+        sparkle.style.left =
+            Math.random() * 100 + "%";
+
+        sparkle.style.top =
+            Math.random() * 75 + "%";
+
+        sparkle.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        cake.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 4000);
+    }
+}
+
+
+/* 🕯️ Make a Wish */
+
+function makeWish() {
+
+    const cake = document.querySelector(".cake");
+
+    if (!cake) return;
+
+    // Turn off candle
+    cake.classList.add("candle-off");
+
+    // Sparkles
+    createCakeSparkles();
+
+    // Small celebration
+    setTimeout(() => {
+
+        const wishText =
+            document.querySelector(".wish-text");
+
+        if (wishText) {
+            wishText.innerHTML =
+                "Wish made... ✨ May all your dreams come true ❤️";
+        }
+
+    }, 700);
 }
 
 
@@ -494,22 +574,11 @@ const captions = [
 ];
 
 
-function changePhoto() {
+function changePhoto(direction = 1) {
 
-    const image =
-        document.getElementById(
-            "slideshowImage"
-        );
-
-    const number =
-        document.getElementById(
-            "currentPhoto"
-        );
-
-    const caption =
-        document.getElementById(
-            "memoryCaption"
-        );
+    const image = document.getElementById("slideshowImage");
+    const number = document.getElementById("currentPhoto");
+    const caption = document.getElementById("memoryCaption");
 
     if (!image) return;
 
@@ -517,28 +586,29 @@ function changePhoto() {
 
     setTimeout(() => {
 
-        currentSlide++;
+        currentSlide += direction;
 
         if (currentSlide >= photoList.length) {
             currentSlide = 0;
         }
 
-        image.src =
-            photoList[currentSlide];
+        if (currentSlide < 0) {
+            currentSlide = photoList.length - 1;
+        }
+
+        image.src = photoList[currentSlide];
 
         if (number) {
-            number.innerText =
-                currentSlide + 1;
+            number.innerText = currentSlide + 1;
         }
 
         if (caption) {
-            caption.innerText =
-                captions[currentSlide];
+            caption.innerText = captions[currentSlide];
         }
 
         image.classList.remove("fade-out");
 
-    }, 500);
+    }, 300);
 }
 
 
