@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Panu 🐼❤️</title>
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,53 +25,79 @@ html {
 body {
     min-height: 100vh;
     font-family: Georgia, "Times New Roman", serif;
+
+    /* LIGHT ROMANTIC BACKGROUND */
     background:
-        radial-gradient(circle at 15% 20%, rgba(255, 170, 195, 0.55), transparent 30%),
-        radial-gradient(circle at 85% 75%, rgba(255, 205, 170, 0.55), transparent 30%),
-        linear-gradient(135deg, #fff5f7, #ffe8ef, #fff0e5);
-    color: black;
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 170, 195, 0.55),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(255, 210, 175, 0.55),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #fff5f7,
+            #ffe8ef,
+            #fff0e5
+        );
+
+    color: #000000;
+
     overflow-x: hidden;
 }
 
-/* =========================
-   COMMON
-========================= */
+
+/* =====================================================
+   COMMON PAGE
+===================================================== */
 
 .page {
     display: none;
+
     min-height: 100vh;
     width: 100%;
+
     padding: 35px 20px;
+
     position: relative;
+
     overflow: hidden;
 }
 
 .page.active {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
-    animation: pageIn .7s ease;
+
+    animation: pageIn 0.7s ease;
 }
 
 @keyframes pageIn {
+
     from {
         opacity: 0;
         transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
-h1, h2, h3 {
-    font-weight: normal;
-}
 
-.gold {
-    color: #e9bd54;
-}
+/* =====================================================
+   BUTTON
+===================================================== */
 
 button {
     font-family: inherit;
@@ -73,298 +105,612 @@ button {
 }
 
 .highlight-btn {
-    border: 1px solid rgba(232,190,84,.55);
-    background: linear-gradient(135deg, #201a10, #0e0c09);
-    color: #f3cf70;
+
+    border: 1px solid #b48a28;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #fff1cf
+        );
+
+    color: #5c4312;
+
     padding: 13px 25px;
+
     border-radius: 30px;
+
     font-size: 15px;
-    transition: .3s;
+
+    transition: 0.3s;
+
     margin-top: 18px;
 }
 
 .highlight-btn:hover {
+
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(225,184,70,.18);
+
+    box-shadow:
+        0 8px 25px rgba(180, 138, 40, 0.20);
 }
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
 
 .music-btn {
+
     position: fixed;
+
     right: 18px;
     bottom: 18px;
+
     width: 56px;
     height: 56px;
+
     border-radius: 50%;
-    border: 1px solid #b28a32;
-    background: rgba(15,15,15,.9);
-    color: #e8bd4e;
+
+    border: 1px solid #b48a28;
+
+    background: rgba(255,255,255,0.90);
+
+    color: #9a721c;
+
     font-size: 25px;
+
     z-index: 9999;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.12);
 }
 
-/* =========================
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+.particle {
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #d5aa45;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.15;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* =====================================================
    PASSWORD PAGE
-========================= */
+===================================================== */
 
 #passwordPage {
     text-align: center;
 }
 
 .password-box {
-    width: min(420px, 92%);
-    padding: 38px 28px;
-    border: 1px solid rgba(222,182,79,.35);
-    border-radius: 24px;
-    background: rgba(25,25,25,.78);
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+
+    width: min(430px, 92%);
+
+    padding: 42px 30px;
+
+    border:
+        1px solid rgba(180, 138, 40, 0.55);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.88);
+
+    box-shadow:
+        0 20px 60px rgba(130,70,90,0.15);
 }
 
 .password-box .lock {
+
     font-size: 48px;
+
     margin-bottom: 15px;
 }
 
 .password-box h1 {
-    color: #e7c15d;
-    font-size: 32px;
-    margin-bottom: 10px;
+
+    color: #b1872b;
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
 }
 
 .password-box p {
-    color: #aaa;
+
+    color: #333;
+
     margin-bottom: 25px;
-    background: rgba(70, 35, 50, 0.88);
+
     font-family: Arial, sans-serif;
+
+    font-size: 15px;
 }
 
 .password-input {
+
     width: 100%;
-    padding: 14px 18px;
-    border-radius: 12px;
-    border: 1px solid #555;
-    background: #111;
-    color: white;
+
+    padding: 15px 18px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid #aaa;
+
+    background: #ffffff;
+
+    color: #000;
+
     outline: none;
+
     text-align: center;
-    font-size: 18px;
+
+    font-size: 19px;
+
     letter-spacing: 5px;
 }
 
 .password-input:focus {
-    border-color: #d4aa42;
+
+    border-color: #c59a35;
+
+    box-shadow:
+        0 0 10px rgba(197,154,53,0.15);
 }
 
 .password-error {
-    color: #e88b8b;
+
+    color: #c43d55;
+
     font-family: Arial, sans-serif;
+
     margin-top: 12px;
+
     min-height: 20px;
 }
 
-/* =========================
+
+/* =====================================================
    LETTER PAGE
-========================= */
+===================================================== */
 
 .letter-page {
+
     justify-content: flex-start !important;
-    padding-top: 25px;
+
+    padding-top: 28px;
 }
+
+
+/* MAIN TITLE */
 
 .letter-title {
-    font-size: clamp(38px, 7vw, 58px);
+
+    font-size:
+        clamp(36px, 7vw, 58px);
+
     color: #000000 !important;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     margin-bottom: 15px;
+
     text-align: center;
+
+    font-weight: normal;
 }
 
+
+/* ENVELOPE */
+
 .envelope-icon {
+
     font-size: 35px;
+
     margin-bottom: 28px;
-    animation: envelopeFloat 2s ease-in-out infinite;
+
+    animation:
+        envelopeFloat 2s ease-in-out infinite;
 }
 
 @keyframes envelopeFloat {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-7px); }
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
 }
 
+
+/* LETTER CARD */
+
 .letter-card {
+
     width: min(1000px, 96%);
+
     padding: 35px 30px;
-    border: 1px solid rgba(201,164,70,.4);
+
+    border:
+        1px solid rgba(180,138,40,0.40);
+
     border-radius: 22px;
-    background: rgba(255,255,255,0.88);
-    box-shadow: 0 25px 80px rgba(0,0,0,.55);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 80px rgba(100,50,70,0.16);
+
     position: relative;
 }
 
 .letter-card::before {
+
     content: "✦";
+
     position: absolute;
+
     right: 25px;
     top: 22px;
-    color: #d8b64d;
+
+    color: #d2a83e;
+
     font-size: 24px;
 }
 
+
+/* LETTER HEADING */
+
 .letter-card h2 {
-    color: #c28b22;
+
+    color: #c28f24;
+
     font-size: 23px;
+
     margin-bottom: 30px;
 }
 
+
+/* LETTER TEXT */
+
 .letter-card p {
-    color: #4a3540;
+
+    color: #000000;
+
     font-family: Arial, sans-serif;
+
     font-size: 16px;
+
     line-height: 1.9;
+
     margin-bottom: 23px;
 }
 
-.letter-card .love-line {
-    color: #eee;
-}
+
+/* WATCH AGAIN */
 
 .watch-btn {
+
     margin-top: 2px;
-    background: transparent;
-    border: 1px solid #444;
-    color: #ddd;
+
+    background: #ffffff;
+
+    border:
+        1px solid #333;
+
+    color: #000000;
+
     padding: 12px 27px;
+
     border-radius: 30px;
+
     font-size: 14px;
+
+    transition: 0.3s;
 }
 
 .watch-btn:hover {
-    border-color: #c9a949;
-    color: #e5c25b;
+
+    background: #000000;
+
+    color: #ffffff;
 }
 
-/* =========================
+
+/* =====================================================
    BIRTHDAY PAGE
-========================= */
+===================================================== */
 
 .birthday-title {
-    font-size: clamp(38px, 8vw, 70px);
+
+    font-size:
+        clamp(38px, 8vw, 70px);
+
     text-align: center;
-    color: #f0d078;
+
+    color: #b48622;
+
     margin-bottom: 5px;
 }
 
 .birthday-subtitle {
-    color: #bbb;
+
+    color: #333;
+
     font-family: Arial, sans-serif;
+
     text-align: center;
+
     font-size: 17px;
 }
 
-/* Cake */
+
+/* =====================================================
+   CAKE
+===================================================== */
 
 .cake {
+
     width: 270px;
+
     height: 280px;
+
     position: relative;
+
     margin: 20px auto;
 }
 
+
+/* CAKE LAYERS */
+
 .cake-layer {
+
     position: absolute;
+
     left: 50%;
-    transform: translateX(-50%) translateY(100px);
+
+    transform:
+        translateX(-50%)
+        translateY(100px);
+
     opacity: 0;
-    border-radius: 12px 12px 18px 18px;
+
+    border-radius:
+        12px 12px 18px 18px;
+
     box-shadow:
-        inset 0 -10px 0 rgba(0,0,0,.15),
-        0 12px 22px rgba(0,0,0,.45);
+        inset 0 -10px 0 rgba(0,0,0,0.13),
+        0 12px 22px rgba(0,0,0,0.20);
 }
+
+
+/* BOTTOM */
 
 .layer1 {
+
     width: 230px;
+
     height: 58px;
+
     bottom: 25px;
+
     background:
-        linear-gradient(to bottom,#6b351d,#3d1d12);
-    animation: cakeLayer .8s ease forwards;
-    animation-delay: .5s;
+        linear-gradient(
+            to bottom,
+            #6b351d,
+            #3d1d12
+        );
+
+    animation:
+        cakeLayer 0.8s ease forwards;
+
+    animation-delay: 0.5s;
 }
 
+
+/* MIDDLE */
+
 .layer2 {
+
     width: 195px;
+
     height: 53px;
+
     bottom: 76px;
+
     background:
-        linear-gradient(to bottom,#b27b45,#754522);
-    animation: cakeLayer .8s ease forwards;
+        linear-gradient(
+            to bottom,
+            #b27b45,
+            #754522
+        );
+
+    animation:
+        cakeLayer 0.8s ease forwards;
+
     animation-delay: 1.3s;
 }
 
+
+/* TOP */
+
 .layer3 {
+
     width: 160px;
+
     height: 48px;
+
     bottom: 122px;
+
     background:
-        linear-gradient(to bottom,#eee4ca,#b9a77d);
-    animation: cakeLayer .8s ease forwards;
+        linear-gradient(
+            to bottom,
+            #eee4ca,
+            #b9a77d
+        );
+
+    animation:
+        cakeLayer 0.8s ease forwards;
+
     animation-delay: 2.1s;
 }
 
 @keyframes cakeLayer {
+
     to {
+
         opacity: 1;
-        transform: translateX(-50%) translateY(0);
+
+        transform:
+            translateX(-50%)
+            translateY(0);
     }
+
 }
 
+
+/* CAKE DECORATION */
+
 .cake-layer::after {
-    content: "•  •  •  •  •";
+
+    content:
+        "•  •  •  •  •";
+
     position: absolute;
+
     width: 100%;
+
     text-align: center;
+
     bottom: 9px;
-    color: rgba(255,220,140,.55);
+
+    color:
+        rgba(255,220,140,0.55);
+
     letter-spacing: 5px;
 }
 
+
+/* 25 */
+
 .cake-number {
+
     position: absolute;
+
     left: 50%;
+
     top: 30px;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
+
     font-family: Arial, sans-serif;
+
     font-weight: bold;
+
     font-size: 31px;
-    color: #f0c95e;
+
+    color: #c9962e;
+
     opacity: 0;
+
     z-index: 20;
-    animation: numberShow .7s ease forwards;
+
+    animation:
+        numberShow 0.7s ease forwards;
+
     animation-delay: 2.8s;
 }
 
 @keyframes numberShow {
-    to { opacity: 1; }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
+
+/* CANDLE */
+
 .candle {
+
     position: absolute;
+
     left: 50%;
+
     bottom: 165px;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
+
     opacity: 0;
+
     z-index: 30;
-    animation: candleShow .7s ease forwards;
+
+    animation:
+        candleShow 0.7s ease forwards;
+
     animation-delay: 3s;
 }
 
 @keyframes candleShow {
-    to { opacity: 1; }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
+
 .candle-stick {
+
     width: 14px;
+
     height: 48px;
+
     border-radius: 4px;
+
     background:
         repeating-linear-gradient(
             45deg,
@@ -375,480 +721,886 @@ button {
         );
 }
 
+
+/* FLAME */
+
 .flame {
+
     position: absolute;
+
     left: 50%;
+
     top: -38px;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
+
     font-size: 28px;
-    animation: flameMove .55s ease-in-out infinite alternate;
+
+    animation:
+        flameMove .55s ease-in-out infinite alternate;
 }
 
 @keyframes flameMove {
+
     from {
-        transform: translateX(-50%) scale(.9);
+        transform:
+            translateX(-50%)
+            scale(.9);
     }
+
     to {
-        transform: translateX(-50%) scale(1.1);
+        transform:
+            translateX(-50%)
+            scale(1.1);
     }
+
 }
 
+
+/* CANDLE OFF */
+
 .cake.candle-off .flame {
+
     opacity: 0;
-    transform: translateX(-50%) scale(0);
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
     animation: none;
+
     transition: .4s;
 }
 
+
 .wish-text {
-    color: #bbb;
+
+    color: #333;
+
     font-family: Arial, sans-serif;
+
     margin-top: -5px;
 }
 
-/* =========================
-   MEMORY GAME
-========================= */
+
+/* =====================================================
+   MEMORY MATCH
+===================================================== */
 
 .game-title {
-    color: #e8bf5c;
+
+    color: #b48622;
+
     font-size: 42px;
+
     text-align: center;
+
     margin-bottom: 8px;
 }
 
 .game-subtitle {
-    color: #aaa;
+
+    color: #444;
+
     font-family: Arial, sans-serif;
+
     text-align: center;
+
     margin-bottom: 25px;
 }
 
+
 .game-grid {
-    width: min(500px, 95%);
+
+    width: min(500px,95%);
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap: 10px;
 }
 
+
 .memory-card {
+
     aspect-ratio: 1;
-    border: 1px solid rgba(215,178,70,.35);
+
+    border:
+        1px solid rgba(180,138,40,0.35);
+
     border-radius: 14px;
-    background: linear-gradient(145deg,#191714,#0b0b0b);
-    color: #e3bb55;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff2f5
+        );
+
+    color: #b48622;
+
     font-size: 27px;
+
     transition: .3s;
-    perspective: 600px;
 }
 
 .memory-card:hover {
+
     transform: scale(1.03);
 }
 
 .memory-card.flipped,
 .memory-card.matched {
-    background: #292116;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff7e5,
+            #ffeaf0
+        );
 }
 
 .memory-card.matched {
+
     border-color: #cda94d;
-    box-shadow: 0 0 16px rgba(211,173,67,.2);
+
+    box-shadow:
+        0 0 16px
+        rgba(211,173,67,.20);
 }
 
+
 .game-status {
+
     margin-top: 20px;
-    color: #ccc;
+
+    color: #333;
+
     font-family: Arial, sans-serif;
 }
 
 .game-status span {
-    color: #e7bd52;
+
+    color: #a77a1d;
 }
 
 .game-message {
+
     margin-top: 12px;
-    color: #e7c766;
+
+    color: #a77a1d;
+
     font-family: Arial, sans-serif;
+
     min-height: 20px;
 }
 
-/* =========================
+
+/* =====================================================
    BALLOONS
-========================= */
+===================================================== */
 
 .balloons-title {
-    color: #e8c05a;
+
+    color: #b48622;
+
     font-size: 44px;
+
     text-align: center;
 }
 
 .balloons-subtitle {
-    color: #aaa;
+
+    color: #444;
+
     font-family: Arial, sans-serif;
-    margin: 8px 0 30px;
+
+    margin:
+        8px 0 30px;
+
     text-align: center;
 }
 
+
 .balloons {
+
     width: min(700px,95%);
+
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 25px;
+
     justify-items: center;
 }
 
+
 .balloon {
+
     width: 90px;
+
     height: 115px;
-    border-radius: 50% 50% 48% 48%;
+
+    border-radius:
+        50% 50% 48% 48%;
+
     border: none;
+
     font-size: 55px;
+
     background: transparent;
-    filter: drop-shadow(0 8px 10px rgba(0,0,0,.4));
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(0,0,0,.15)
+        );
+
     transition: .25s;
 }
 
 .balloon:hover {
-    transform: translateY(-7px);
+
+    transform:
+        translateY(-7px);
 }
 
 .balloon.popped {
+
     opacity: 0;
-    transform: scale(1.7);
+
+    transform:
+        scale(1.7);
+
     pointer-events: none;
 }
 
+
 .wish-message {
+
     min-height: 45px;
+
     margin-top: 25px;
+
     max-width: 600px;
+
     text-align: center;
-    color: #e6c462;
+
+    color: #9d7420;
+
     font-family: Arial, sans-serif;
+
     font-size: 17px;
+
     opacity: 0;
+
     transition: .4s;
 }
 
 .wish-message.show {
+
     opacity: 1;
 }
 
+
 .popped {
+
     margin-top: 15px;
-    color: #aaa;
+
+    color: #555;
+
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   MEMORIES
-========================= */
+
+/* =====================================================
+   MEMORIES PAGE
+===================================================== */
 
 .memories-page {
+
     background:
-        radial-gradient(circle at center, rgba(73,42,95,.18), transparent 45%),
-        linear-gradient(145deg,#030303,#09070d,#040404);
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,180,205,.40),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(255,215,175,.40),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff6f8,
+            #ffeaf0,
+            #fff2e8
+        );
 }
 
+
 .memories-title {
-    color: #f1d57b;
+
+    color: #b48622;
+
     font-size: 45px;
+
     text-align: center;
+
     margin-bottom: 5px;
 }
 
 .memories-subtitle {
-    color: #999;
+
+    color: #555;
+
     font-family: Arial, sans-serif;
+
     margin-bottom: 20px;
 }
 
+
+/* SLIDESHOW */
+
 .photo-slideshow {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: min(900px,100%);
+
     gap: 20px;
 }
 
+
 .photo-frame {
+
     width: min(430px,72vw);
+
     height: min(570px,65vh);
+
     min-height: 390px;
+
     border-radius: 18px;
+
     overflow: hidden;
-    border: 1px solid rgba(220,186,87,.45);
-    background: #080808;
+
+    border:
+        1px solid
+        rgba(180,138,40,.45);
+
+    background: #ffffff;
+
     box-shadow:
-        0 25px 70px rgba(0,0,0,.7),
-        0 0 30px rgba(154,119,49,.08);
+        0 25px 70px
+        rgba(100,50,70,.18);
 }
 
+
 .photo-frame img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: contain;
+
     display: block;
-    transition: opacity .35s ease, transform .35s ease;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
 }
 
 .photo-frame img.fade-out {
+
     opacity: 0;
-    transform: scale(.97);
+
+    transform:
+        scale(.97);
 }
 
+
+/* ARROWS */
+
 .photo-arrow {
+
     width: 50px;
+
     height: 50px;
+
     border-radius: 50%;
-    border: 1px solid #665329;
-    background: rgba(15,15,15,.9);
-    color: #e8c35e;
+
+    border:
+        1px solid #a9832d;
+
+    background:
+        rgba(255,255,255,.92);
+
+    color: #9b721b;
+
     font-size: 36px;
+
     line-height: 40px;
 }
 
 .photo-arrow:hover {
-    background: #211c12;
+
+    background: #fff5da;
 }
 
+
+/* DOTS */
+
 .photo-dots {
+
     display: flex;
+
     justify-content: center;
+
     gap: 6px;
+
     margin-top: 17px;
+
     flex-wrap: wrap;
+
     max-width: 500px;
 }
 
 .photo-dot {
+
     width: 6px;
+
     height: 6px;
+
     border-radius: 50%;
-    background: #555;
+
+    background: #aaa;
+
     cursor: pointer;
+
     transition: .3s;
 }
 
 .photo-dot.active {
-    background: #e4bd55;
-    transform: scale(1.5);
+
+    background: #d2a83e;
+
+    transform:
+        scale(1.5);
 }
+
 
 .slide-number {
+
     margin-top: 13px;
-    color: #e7c45e;
+
+    color: #9a721c;
+
     font-family: Arial, sans-serif;
 }
+
 
 #memoryCaption {
-    color: #ccc;
+
+    color: #444;
+
     font-family: Arial, sans-serif;
+
     margin-top: 8px;
+
     text-align: center;
 }
+
 
 .change-photo-btn {
+
     margin-top: 15px;
+
     padding: 10px 19px;
+
     border-radius: 22px;
-    border: 1px solid #4d4d4d;
-    background: transparent;
-    color: #ccc;
+
+    border:
+        1px solid #777;
+
+    background: #ffffff;
+
+    color: #333;
 }
+
+.change-photo-btn:hover {
+
+    border-color: #b48a28;
+
+    color: #9b721b;
+}
+
 
 .memory-next-btn {
+
     margin-top: 15px;
 }
 
+
 .memory-quote {
+
     margin-top: 25px;
+
     color: #777;
+
     letter-spacing: 3px;
+
     font-family: Arial, sans-serif;
+
     text-align: center;
+
     font-size: 12px;
 }
 
-/* =========================
+
+/* =====================================================
    FINAL PAGE
-========================= */
+===================================================== */
 
 .final-page {
+
     background:
-        radial-gradient(circle at center, rgba(101,72,125,.15), transparent 40%),
-        linear-gradient(135deg,#030303,#0d0910,#030303);
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,175,200,.42),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(255,215,180,.42),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #fff6f8,
+            #ffe9ef,
+            #fff2e7
+        );
 }
 
+
 .final-title {
-    color: #ebc862;
-    font-size: clamp(35px,7vw,60px);
+
+    color: #b48622;
+
+    font-size:
+        clamp(35px,7vw,60px);
+
     text-align: center;
+
     margin-bottom: 25px;
 }
 
+
 .final-message {
+
     width: min(850px,94%);
+
     padding: 38px 32px;
-    border: 1px solid rgba(216,180,78,.35);
+
+    border:
+        1px solid
+        rgba(180,138,40,.35);
+
     border-radius: 22px;
-    background: rgba(20,20,20,.86);
-    box-shadow: 0 25px 70px rgba(0,0,0,.6);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,50,70,.16);
+
     text-align: center;
 }
 
+
 .final-message p {
+
     font-family: Arial, sans-serif;
-    color: #d1d1d1;
+
+    color: #000000;
+
     line-height: 1.9;
+
     font-size: 16px;
+
     margin-bottom: 22px;
 }
 
+
 .final-message h2 {
-    color: #f0d47a;
+
+    color: #b48622;
+
     line-height: 1.6;
+
     font-size: 24px;
+
     margin-top: 30px;
 }
 
+
 .final-message h3 {
-    color: #e7c05b;
+
+    color: #b48622;
+
     margin-top: 25px;
+
     font-size: 20px;
 }
 
+
 .restart-btn {
+
     margin-top: 25px;
+
     padding: 12px 25px;
+
     border-radius: 25px;
-    background: transparent;
-    color: #ccc;
-    border: 1px solid #444;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    border:
+        1px solid #444;
 }
 
-/* =========================
-   PARTICLES
-========================= */
+.restart-btn:hover {
 
-.particle {
-    position: fixed;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: #e3bd59;
-    opacity: .65;
-    pointer-events: none;
-    z-index: 0;
-    animation: twinkle 2s infinite alternate;
+    background: #000000;
+
+    color: #ffffff;
 }
 
-@keyframes twinkle {
-    from { opacity: .15; }
-    to { opacity: .8; }
-}
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:600px) {
 
     .page {
-        padding: 25px 12px;
+
+        padding:
+            25px 12px;
     }
 
+
+    /* LETTER */
+
     .letter-title {
-        font-size: 38px;
+
+        font-size: 34px;
+
+        line-height: 1.2;
     }
 
     .letter-card {
-        padding: 28px 20px;
+
+        padding:
+            28px 20px;
     }
 
     .letter-card h2 {
+
         font-size: 20px;
+
+        line-height: 1.5;
     }
 
     .letter-card p {
+
         font-size: 14px;
+
         line-height: 1.8;
     }
 
+
+    /* BIRTHDAY */
+
     .birthday-title {
+
         font-size: 42px;
+
+        line-height: 1.2;
     }
 
+
+    /* GAME */
+
     .game-grid {
+
         gap: 7px;
     }
 
     .memory-card {
+
         font-size: 22px;
     }
 
+
+    /* BALLOONS */
+
     .balloons {
+
         gap: 12px;
     }
 
     .balloon {
+
         font-size: 45px;
     }
 
+
+    /* MEMORIES */
+
     .photo-slideshow {
+
         gap: 7px;
     }
 
     .photo-frame {
+
         width: 68vw;
+
         height: 58vh;
+
         min-height: 350px;
     }
 
     .photo-arrow {
+
         width: 40px;
+
         height: 40px;
+
         font-size: 28px;
     }
 
+
+    /* FINAL */
+
     .final-message {
-        padding: 28px 20px;
+
+        padding:
+            28px 20px;
     }
 
     .final-message p {
+
         font-size: 14px;
     }
 
     .final-message h2 {
+
         font-size: 20px;
     }
+
 }
+
+
+/* EXTRA SMALL PHONES */
+
+@media(max-width:390px) {
+
+    .letter-title {
+
+        font-size: 29px;
+    }
+
+    .letter-card {
+
+        padding:
+            24px 16px;
+    }
+
+    .photo-frame {
+
+        width: 65vw;
+
+        min-height: 300px;
+    }
+
+    .photo-arrow {
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 24px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- MUSIC -->
-<audio id="backgroundMusic" src="music.mpeg" loop></audio>
 
-<button class="music-btn" onclick="toggleMusic()" id="musicButton">♪</button>
+<!-- =====================================================
+     MUSIC
+===================================================== -->
 
-<!-- =========================
+<audio
+    id="backgroundMusic"
+    src="music.mpeg"
+    loop>
+</audio>
+
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+    id="musicButton">
+
+    ♪
+
+</button>
+
+
+<!-- =====================================================
      PASSWORD PAGE
-========================= -->
+===================================================== -->
 
-<section id="passwordPage" class="page active">
+<section
+    id="passwordPage"
+    class="page active">
+
 
     <div class="password-box">
 
-        <div class="lock">🔐</div>
 
-        <h1>A Little Surprise</h1>
+        <div class="lock">
+            🔐
+        </div>
+
+
+        <h1>
+            A Little Surprise
+        </h1>
+
 
         <p>
-            This little birthday world is only for Panu 🐼❤️
+            This little birthday world is only for Panu 🐼💗
         </p>
+
 
         <input
             type="password"
@@ -858,400 +1610,737 @@ button {
             maxlength="4"
         >
 
+
         <br>
 
-        <button class="highlight-btn" onclick="checkPassword()">
+
+        <button
+            class="highlight-btn"
+            onclick="checkPassword()">
+
             Open Surprise ✨
+
         </button>
 
-        <div id="passwordError" class="password-error"></div>
+
+        <div
+            id="passwordError"
+            class="password-error">
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     FIRST LETTER
-========================= -->
 
-<section id="letterPage" class="page letter-page">
+<!-- =====================================================
+     FIRST LETTER
+===================================================== -->
+
+<section
+    id="letterPage"
+    class="page letter-page">
+
 
     <h1 class="letter-title">
+
         A Letter Just For You
+
     </h1>
 
+
     <div class="envelope-icon">
+
         💌
+
     </div>
+
 
     <div class="letter-card">
 
+
         <h2>
+
             HAPPY BIRTHDAY, MY PANU! 💗🎂,
+
         </h2>
 
+
         <p>
+
             Today is very special because it's your birthday,
             and you are one of the most important people in my life.
             🥹💗 तू माझ्यासाठी फक्त नवरा नाहीस, तू माझं happiness,
             माझं comfort आणि माझ्या आयुष्यातला खूप सुंदर भाग आहेस.
+
         </p>
 
+
         <p>
+
             Thank you for always being there for me,
             मला समजून घेण्यासाठी, माझ्या छोट्या छोट्या गोष्टींची
-            काळजी घेण्यासाठी आणि नेहमी मला smile करण्याचं कारण दिल्याबद्दल. 💗
+            काळजी घेण्यासाठी आणि नेहमी मला smile करण्याचं कारण
+            दिल्याबद्दल. 💗
+
         </p>
 
+
         <p>
+
             I wish you lots of happiness, success and peace.
-            तुझी प्रत्येक dream पूर्ण होवो आणि आयुष्यात तुला हवं ते सगळं मिळो. ✨
+            तुझी प्रत्येक dream पूर्ण होवो आणि आयुष्यात तुला
+            हवं ते सगळं मिळो. ✨
+
         </p>
 
+
         <p>
+
             I love you so much, Panda. 🥹💗
-            तू माझ्या आयुष्यात आहेस, हीच माझ्यासाठी सगळ्यात beautiful गोष्ट आहे.
-            आज, उद्या आणि नेहमी मला तुझ्यासोबत राहायचं आहे. 💗
+            तू माझ्या आयुष्यात आहेस, हीच माझ्यासाठी सगळ्यात
+            beautiful गोष्ट आहे. आज, उद्या आणि नेहमी मला
+            तुझ्यासोबत राहायचं आहे. 💗
+
         </p>
+
 
         <p>
+
             Happy Birthday, Panu.
-            I hope हे छोटंसं surprise तुझ्या face वर smile आणेल 💗😊🫶🏻♾️
+            I hope हे छोटंसं surprise तुझ्या face वर smile आणेल
+            💗😊🫶🏻♾️
+
             <br>
+
             I Love You Panda 🐼💗♾️
+
         </p>
 
-        <button class="watch-btn" onclick="goToPage('birthdayPage')">
+
+        <button
+            class="watch-btn"
+            onclick="goToPage('birthdayPage')">
+
             ✉ Watch Again
+
         </button>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     BIRTHDAY / CAKE
-========================= -->
 
-<section id="birthdayPage" class="page">
+<!-- =====================================================
+     BIRTHDAY PAGE
+===================================================== -->
+
+<section
+    id="birthdayPage"
+    class="page">
+
 
     <h1 class="birthday-title">
+
         Happy Birthday, Panu 🐼
+
     </h1>
 
+
     <p class="birthday-subtitle">
+
         Today is all about you. ❤️
+
     </p>
 
-    <div class="cake" id="birthdayCake">
+
+    <div
+        class="cake"
+        id="birthdayCake">
+
 
         <div class="cake-number">
             25
         </div>
 
-        <div class="cake-layer layer1"></div>
 
-        <div class="cake-layer layer2"></div>
+        <div
+            class="cake-layer layer1">
+        </div>
 
-        <div class="cake-layer layer3"></div>
+
+        <div
+            class="cake-layer layer2">
+        </div>
+
+
+        <div
+            class="cake-layer layer3">
+        </div>
+
 
         <div class="candle">
+
 
             <div class="flame">
                 🔥
             </div>
 
-            <div class="candle-stick"></div>
+
+            <div class="candle-stick">
+            </div>
+
 
         </div>
 
+
     </div>
+
 
     <p class="wish-text">
+
         Make a wish... 🕯️
+
     </p>
 
-    <button class="highlight-btn" onclick="makeWish()">
+
+    <button
+        class="highlight-btn"
+        onclick="makeWish()">
+
         ✨ Make a Wish
+
     </button>
 
+
 </section>
 
 
-<!-- =========================
-     MEMORY MATCH
-========================= -->
 
-<section id="gamePage" class="page">
+<!-- =====================================================
+     MEMORY GAME
+===================================================== -->
+
+<section
+    id="gamePage"
+    class="page">
+
 
     <h1 class="game-title">
+
         Memory Match 🧩
+
     </h1>
 
+
     <p class="game-subtitle">
+
         Match all the pairs to unlock the next surprise ❤️
+
     </p>
 
-    <div class="game-grid" id="gameGrid">
 
-        <button class="memory-card" data-value="🐼">?</button>
-        <button class="memory-card" data-value="🎂">?</button>
-        <button class="memory-card" data-value="❤️">?</button>
-        <button class="memory-card" data-value="⭐">?</button>
+    <div
+        class="game-grid"
+        id="gameGrid">
 
-        <button class="memory-card" data-value="🌙">?</button>
-        <button class="memory-card" data-value="✨">?</button>
-        <button class="memory-card" data-value="⭐">?</button>
-        <button class="memory-card" data-value="❤️">?</button>
 
-        <button class="memory-card" data-value="🎂">?</button>
-        <button class="memory-card" data-value="🐼">?</button>
-        <button class="memory-card" data-value="✨">?</button>
-        <button class="memory-card" data-value="🌙">?</button>
+        <button
+            class="memory-card"
+            data-value="🐼">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="🎂">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="❤️">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="⭐">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="🌙">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="✨">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="⭐">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="❤️">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="🎂">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="🐼">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="✨">
+            ?
+        </button>
+
+
+        <button
+            class="memory-card"
+            data-value="🌙">
+            ?
+        </button>
+
 
     </div>
+
 
     <div class="game-status">
-        Moves: <span id="moves">0</span>
+
+        Moves:
+        <span id="moves">
+            0
+        </span>
+
         &nbsp; | &nbsp;
-        Matches: <span id="matches">0</span>/6
+
+        Matches:
+        <span id="matches">
+            0
+        </span>/6
+
     </div>
 
-    <div class="game-message" id="gameMessage"></div>
+
+    <div
+        class="game-message"
+        id="gameMessage">
+    </div>
+
 
 </section>
 
 
-<!-- =========================
-     BALLOONS
-========================= -->
 
-<section id="balloonsPage" class="page">
+<!-- =====================================================
+     BALLOONS
+===================================================== -->
+
+<section
+    id="balloonsPage"
+    class="page">
+
 
     <h1 class="balloons-title">
+
         Birthday Wishes 🎈
+
     </h1>
 
+
     <p class="balloons-subtitle">
+
         Pop every balloon to reveal your wishes ❤️
+
     </p>
+
 
     <div class="balloons">
 
-        <button
-            class="balloon"
-            onclick="popBalloon(this, 'You deserve all the happiness in the world. ❤️')">
-            🎈
-        </button>
 
         <button
             class="balloon"
-            onclick="popBalloon(this, 'May every dream of yours come true. ✨')">
+            onclick="popBalloon(
+                this,
+                'You deserve all the happiness in the world. ❤️'
+            )">
+
             🎈
+
         </button>
+
 
         <button
             class="balloon"
-            onclick="popBalloon(this, 'Keep smiling just the way you do. 😊')">
+            onclick="popBalloon(
+                this,
+                'May every dream of yours come true. ✨'
+            )">
+
             🎈
+
         </button>
+
 
         <button
             class="balloon"
-            onclick="popBalloon(this, 'May this year bring you beautiful memories. 💕')">
+            onclick="popBalloon(
+                this,
+                'Keep smiling just the way you do. 😊'
+            )">
+
             🎈
+
         </button>
+
 
         <button
             class="balloon"
-            onclick="popBalloon(this, 'You are truly special to me. 🫶🏻')">
+            onclick="popBalloon(
+                this,
+                'May this year bring you beautiful memories. 💕'
+            )">
+
             🎈
+
         </button>
+
 
         <button
             class="balloon"
-            onclick="popBalloon(this, 'Happy Birthday, my Panu! ❤️🎂')">
+            onclick="popBalloon(
+                this,
+                'You are truly special to me. 🫶🏻'
+            )">
+
             🎈
+
         </button>
+
+
+        <button
+            class="balloon"
+            onclick="popBalloon(
+                this,
+                'Happy Birthday, my Panu! ❤️🎂'
+            )">
+
+            🎈
+
+        </button>
+
 
     </div>
 
-    <div id="wishMessage" class="wish-message"></div>
+
+    <div
+        id="wishMessage"
+        class="wish-message">
+    </div>
+
 
     <p class="popped">
+
         Popped 0/6
+
     </p>
+
 
 </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
 
-<section id="memoriesPage" class="page memories-page">
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section
+    id="memoriesPage"
+    class="page memories-page">
+
 
     <h1 class="memories-title">
+
         Our Memories ❤️
+
     </h1>
 
+
     <p class="memories-subtitle">
+
         16 moments. So many memories.
+
     </p>
 
+
     <div class="photo-slideshow">
+
 
         <button
             class="photo-arrow"
             onclick="changePhoto(-1)">
+
             ‹
+
         </button>
 
+
         <div class="photo-frame">
+
 
             <img
                 id="slideshowImage"
                 src="1.jpeg"
-                alt="Our Memory"
-            >
+                alt="Our Memory">
+
 
         </div>
+
 
         <button
             class="photo-arrow"
             onclick="changePhoto(1)">
+
             ›
+
         </button>
 
+
     </div>
+
 
     <div
         class="photo-dots"
         id="photoDots">
     </div>
 
+
     <div class="slide-number">
-        <span id="currentPhoto">1</span> / 16
+
+        <span id="currentPhoto">
+            1
+        </span>
+
+        / 16
+
     </div>
 
+
     <p id="memoryCaption">
+
         Your beautiful memories ❤️
+
     </p>
+
 
     <button
         class="change-photo-btn"
         onclick="changePhoto(1)">
+
         🖼️ Change Photo
+
     </button>
+
 
     <button
         class="highlight-btn memory-next-btn"
         onclick="goToPage('finalPage')">
+
         One Last Surprise 💌 →
+
     </button>
 
+
     <p class="memory-quote">
+
         “ SAME PERSON, DIFFERENT HAPPINESS ”
+
     </p>
+
 
 </section>
 
 
-<!-- =========================
-     FINAL MESSAGE
-========================= -->
 
-<section id="finalPage" class="page final-page">
+<!-- =====================================================
+     FINAL PAGE
+===================================================== -->
+
+<section
+    id="finalPage"
+    class="page final-page">
+
 
     <h1 class="final-title">
+
         One Last Thing... ❤️
+
     </h1>
+
 
     <div class="final-message">
 
-        <p>
-            Thank you for being such a beautiful part of my life. ❤️
-        </p>
 
         <p>
+
+            Thank you for being such a beautiful part of my life. ❤️
+
+        </p>
+
+
+        <p>
+
             तुझ्यासोबतचा प्रत्येक moment माझ्यासाठी खूप special आहे.
             तू माझ्या life मध्ये आलास आणि simple moments सुद्धा
             beautiful memories झाले. 🥹❤️
+
         </p>
 
+
         <p>
+
             I may not say it every day, but you truly mean so much to me.
             तुझं smile, तुझी care आणि तुझ्यासोबत असण्याची feeling —
             माझ्यासाठी सगळंच precious आहे. 🫶🏻
+
         </p>
 
+
         <p>
+
             I hope this new year of your life brings you endless happiness,
             success and everything you've ever wished for. ✨
+
         </p>
+
 
         <p>
+
             आयुष्यात कितीही chapters आले तरी,
             I just want more beautiful memories with you. ❤️
+
         </p>
 
+
         <h2>
+
             You are not just a part of my story,
+
             <br>
+
             you are one of my favourite chapters. ❤️
+
         </h2>
 
+
         <h3>
+
             Forever & Always, Panu. 🐼❤️
+
         </h3>
+
 
         <button
             class="restart-btn"
             onclick="restartSurprise()">
+
             🔄 Start Again
+
         </button>
 
+
     </div>
+
 
 </section>
 
 
+
 <script>
 
-/* =========================
+/* =====================================================
    PAGE NAVIGATION
-========================= */
+===================================================== */
 
 function goToPage(pageId) {
 
-    document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
-    });
+    document
+        .querySelectorAll(".page")
+        .forEach(page => {
 
-    const page = document.getElementById(pageId);
+            page.classList.remove("active");
+
+        });
+
+
+    const page =
+        document.getElementById(pageId);
+
 
     if (page) {
+
         page.classList.add("active");
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     }
 
+
     createParticles();
+
 }
 
 
-/* =========================
+/* =====================================================
    PASSWORD
-========================= */
+===================================================== */
 
 function checkPassword() {
 
-    const input = document.getElementById("passwordInput");
-    const error = document.getElementById("passwordError");
+    const input =
+        document.getElementById(
+            "passwordInput"
+        );
+
+    const error =
+        document.getElementById(
+            "passwordError"
+        );
+
 
     if (input.value === "1803") {
 
@@ -1261,44 +2350,72 @@ function checkPassword() {
 
         goToPage("letterPage");
 
-    } else {
+    }
 
-        error.textContent = "Wrong password 💔 Try again.";
+    else {
+
+        error.textContent =
+            "Wrong password 💔 Try again.";
 
         input.value = "";
 
     }
+
 }
 
+
+/* ENTER KEY */
+
 document
-.getElementById("passwordInput")
-.addEventListener("keydown", function(event) {
+    .getElementById("passwordInput")
+    .addEventListener(
+        "keydown",
+        function(event) {
 
-    if (event.key === "Enter") {
-        checkPassword();
-    }
+            if (event.key === "Enter") {
 
-});
+                checkPassword();
+
+            }
+
+        }
+    );
 
 
-/* =========================
+/* =====================================================
    MUSIC
-========================= */
+===================================================== */
 
-const music = document.getElementById("backgroundMusic");
-const musicButton = document.getElementById("musicButton");
+const music =
+    document.getElementById(
+        "backgroundMusic"
+    );
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
 
 function startMusic() {
 
     music.volume = 0.55;
 
-    music.play().then(() => {
-        musicButton.textContent = "♫";
-    }).catch(() => {
-        musicButton.textContent = "♪";
-    });
+
+    music.play()
+        .then(() => {
+
+            musicButton.textContent = "♫";
+
+        })
+        .catch(() => {
+
+            musicButton.textContent = "♪";
+
+        });
 
 }
+
 
 function toggleMusic() {
 
@@ -1308,7 +2425,9 @@ function toggleMusic() {
 
         musicButton.textContent = "♫";
 
-    } else {
+    }
+
+    else {
 
         music.pause();
 
@@ -1319,15 +2438,22 @@ function toggleMusic() {
 }
 
 
-/* =========================
+/* =====================================================
    CAKE
-========================= */
+===================================================== */
 
 function makeWish() {
 
-    const cake = document.getElementById("birthdayCake");
+    const cake =
+        document.getElementById(
+            "birthdayCake"
+        );
 
-    cake.classList.add("candle-off");
+
+    cake.classList.add(
+        "candle-off"
+    );
+
 
     setTimeout(() => {
 
@@ -1338,55 +2464,88 @@ function makeWish() {
 }
 
 
-/* =========================
+/* =====================================================
    MEMORY MATCH GAME
-========================= */
+===================================================== */
 
 let firstCard = null;
+
 let secondCard = null;
+
 let lockBoard = false;
+
 let moves = 0;
+
 let matches = 0;
 
-const cards = document.querySelectorAll(".memory-card");
+
+const cards =
+    document.querySelectorAll(
+        ".memory-card"
+    );
+
 
 cards.forEach(card => {
 
-    card.addEventListener("click", function() {
+    card.addEventListener(
+        "click",
+        function() {
 
-        if (
-            lockBoard ||
-            card.classList.contains("flipped") ||
-            card.classList.contains("matched")
-        ) {
-            return;
+            if (
+
+                lockBoard ||
+
+                card.classList.contains(
+                    "flipped"
+                ) ||
+
+                card.classList.contains(
+                    "matched"
+                )
+
+            ) {
+
+                return;
+
+            }
+
+
+            flipCard(card);
+
         }
-
-        flipCard(card);
-
-    });
+    );
 
 });
 
 
 function flipCard(card) {
 
-    card.classList.add("flipped");
+    card.classList.add(
+        "flipped"
+    );
 
-    card.textContent = card.dataset.value;
+    card.textContent =
+        card.dataset.value;
+
 
     if (!firstCard) {
 
         firstCard = card;
+
         return;
 
     }
+
 
     secondCard = card;
 
     moves++;
 
-    document.getElementById("moves").textContent = moves;
+
+    document.getElementById(
+        "moves"
+    ).textContent = moves;
+
 
     checkMatch();
 
@@ -1396,43 +2555,72 @@ function flipCard(card) {
 function checkMatch() {
 
     const isMatch =
-        firstCard.dataset.value === secondCard.dataset.value;
+        firstCard.dataset.value ===
+        secondCard.dataset.value;
+
 
     if (isMatch) {
 
-        firstCard.classList.add("matched");
-        secondCard.classList.add("matched");
+        firstCard.classList.add(
+            "matched"
+        );
+
+        secondCard.classList.add(
+            "matched"
+        );
+
 
         matches++;
 
-        document.getElementById("matches").textContent = matches;
+
+        document.getElementById(
+            "matches"
+        ).textContent = matches;
+
 
         resetCards();
 
+
         if (matches === 6) {
 
-            document.getElementById("gameMessage").textContent =
+            document.getElementById(
+                "gameMessage"
+            ).textContent =
                 "All memories matched! ❤️ Next surprise unlocked...";
+
 
             setTimeout(() => {
 
-                goToPage("balloonsPage");
+                goToPage(
+                    "balloonsPage"
+                );
 
             }, 1800);
 
         }
 
-    } else {
+    }
+
+    else {
 
         lockBoard = true;
 
+
         setTimeout(() => {
 
-            firstCard.classList.remove("flipped");
-            secondCard.classList.remove("flipped");
+            firstCard.classList.remove(
+                "flipped"
+            );
+
+            secondCard.classList.remove(
+                "flipped"
+            );
+
 
             firstCard.textContent = "?";
+
             secondCard.textContent = "?";
+
 
             resetCards();
 
@@ -1446,48 +2634,80 @@ function checkMatch() {
 function resetCards() {
 
     firstCard = null;
+
     secondCard = null;
+
     lockBoard = false;
 
 }
 
 
-/* =========================
+/* =====================================================
    BALLOONS
-========================= */
+===================================================== */
 
 let poppedBalloons = 0;
 
-function popBalloon(balloon, message) {
 
-    if (balloon.classList.contains("popped")) {
+function popBalloon(
+    balloon,
+    message
+) {
+
+    if (
+        balloon.classList.contains(
+            "popped"
+        )
+    ) {
+
         return;
+
     }
 
-    balloon.classList.add("popped");
+
+    balloon.classList.add(
+        "popped"
+    );
+
 
     poppedBalloons++;
 
+
     const wishMessage =
-        document.getElementById("wishMessage");
+        document.getElementById(
+            "wishMessage"
+        );
 
-    wishMessage.textContent = message;
 
-    wishMessage.classList.add("show");
+    wishMessage.textContent =
+        message;
+
+
+    wishMessage.classList.add(
+        "show"
+    );
+
 
     const counter =
-        document.querySelector(".popped");
+        document.querySelector(
+            ".popped"
+        );
+
 
     counter.textContent =
         `Popped ${poppedBalloons}/6`;
 
+
     createPopEffect(balloon);
+
 
     if (poppedBalloons === 6) {
 
         setTimeout(() => {
 
-            goToPage("memoriesPage");
+            goToPage(
+                "memoriesPage"
+            );
 
         }, 2500);
 
@@ -1496,62 +2716,127 @@ function popBalloon(balloon, message) {
 }
 
 
-/* =========================
+/* =====================================================
    BALLOON POP EFFECT
-========================= */
+===================================================== */
 
 function createPopEffect(element) {
 
-    const rect = element.getBoundingClientRect();
+    const rect =
+        element.getBoundingClientRect();
 
-    for (let i = 0; i < 14; i++) {
 
-        const particle = document.createElement("span");
+    for (
+        let i = 0;
+        i < 14;
+        i++
+    ) {
+
+        const particle =
+            document.createElement(
+                "span"
+            );
+
 
         particle.textContent = "✦";
 
-        particle.style.position = "fixed";
-        particle.style.left = rect.left + rect.width / 2 + "px";
-        particle.style.top = rect.top + rect.height / 2 + "px";
-        particle.style.color = "#e5c15a";
-        particle.style.fontSize = "14px";
-        particle.style.pointerEvents = "none";
-        particle.style.zIndex = "9999";
+
+        particle.style.position =
+            "fixed";
+
+
+        particle.style.left =
+            rect.left +
+            rect.width / 2 +
+            "px";
+
+
+        particle.style.top =
+            rect.top +
+            rect.height / 2 +
+            "px";
+
+
+        particle.style.color =
+            "#d6aa42";
+
+
+        particle.style.fontSize =
+            "14px";
+
+
+        particle.style.pointerEvents =
+            "none";
+
+
+        particle.style.zIndex =
+            "9999";
+
 
         const angle =
-            Math.random() * Math.PI * 2;
+            Math.random() *
+            Math.PI * 2;
+
 
         const distance =
-            40 + Math.random() * 70;
+            40 +
+            Math.random() * 70;
+
 
         const x =
-            Math.cos(angle) * distance;
+            Math.cos(angle) *
+            distance;
+
 
         const y =
-            Math.sin(angle) * distance;
+            Math.sin(angle) *
+            distance;
 
-        document.body.appendChild(particle);
 
-        particle.animate(
-            [
-                {
-                    transform: "translate(-50%,-50%) scale(1)",
-                    opacity: 1
-                },
-                {
-                    transform:
-                        `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(0)`,
-                    opacity: 0
-                }
-            ],
-            {
-                duration: 700,
-                easing: "ease-out"
-            }
+        document.body.appendChild(
+            particle
         );
 
+
+        particle.animate(
+
+            [
+
+                {
+                    transform:
+                        "translate(-50%,-50%) scale(1)",
+
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        `translate(
+                            calc(-50% + ${x}px),
+                            calc(-50% + ${y}px)
+                        )
+                        scale(0)`,
+
+                    opacity: 0
+                }
+
+            ],
+
+            {
+
+                duration: 700,
+
+                easing: "ease-out"
+
+            }
+
+        );
+
+
         setTimeout(() => {
+
             particle.remove();
+
         }, 750);
 
     }
@@ -1559,19 +2844,28 @@ function createPopEffect(element) {
 }
 
 
-/* =========================
+/* =====================================================
    PHOTO SLIDESHOW
-========================= */
+===================================================== */
 
 const photoList = [];
 
-for (let i = 1; i <= 16; i++) {
 
-    photoList.push(`${i}.jpeg`);
+for (
+    let i = 1;
+    i <= 16;
+    i++
+) {
+
+    photoList.push(
+        `${i}.jpeg`
+    );
 
 }
 
+
 let currentSlide = 0;
+
 
 const captions = [
 
@@ -1610,23 +2904,43 @@ const captions = [
 ];
 
 
+/* CREATE DOTS */
+
 function createPhotoDots() {
 
     const container =
-        document.getElementById("photoDots");
+        document.getElementById(
+            "photoDots"
+        );
+
 
     container.innerHTML = "";
 
-    for (let i = 0; i < photoList.length; i++) {
+
+    for (
+        let i = 0;
+        i < photoList.length;
+        i++
+    ) {
 
         const dot =
-            document.createElement("span");
+            document.createElement(
+                "span"
+            );
 
-        dot.className = "photo-dot";
+
+        dot.className =
+            "photo-dot";
+
 
         if (i === currentSlide) {
-            dot.classList.add("active");
+
+            dot.classList.add(
+                "active"
+            );
+
         }
+
 
         dot.onclick = function() {
 
@@ -1636,82 +2950,139 @@ function createPhotoDots() {
 
         };
 
-        container.appendChild(dot);
+
+        container.appendChild(
+            dot
+        );
 
     }
 
 }
 
 
+/* SHOW PHOTO */
+
 function showPhoto() {
 
     const image =
-        document.getElementById("slideshowImage");
+        document.getElementById(
+            "slideshowImage"
+        );
+
 
     const number =
-        document.getElementById("currentPhoto");
+        document.getElementById(
+            "currentPhoto"
+        );
+
 
     const caption =
-        document.getElementById("memoryCaption");
+        document.getElementById(
+            "memoryCaption"
+        );
 
-    image.classList.add("fade-out");
+
+    image.classList.add(
+        "fade-out"
+    );
+
 
     setTimeout(() => {
 
         image.src =
             photoList[currentSlide];
 
+
         number.textContent =
             currentSlide + 1;
+
 
         caption.textContent =
             captions[currentSlide];
 
-        document
-        .querySelectorAll(".photo-dot")
-        .forEach((dot, index) => {
 
-            dot.classList.toggle(
-                "active",
-                index === currentSlide
+        document
+            .querySelectorAll(
+                ".photo-dot"
+            )
+            .forEach(
+                (dot,index) => {
+
+                    dot.classList.toggle(
+                        "active",
+                        index === currentSlide
+                    );
+
+                }
             );
 
-        });
 
-        image.classList.remove("fade-out");
+        image.classList.remove(
+            "fade-out"
+        );
+
 
     }, 300);
 
 }
 
 
-function changePhoto(direction = 1) {
+/* CHANGE PHOTO */
+
+function changePhoto(
+    direction = 1
+) {
 
     currentSlide += direction;
 
-    if (currentSlide >= photoList.length) {
+
+    if (
+        currentSlide >=
+        photoList.length
+    ) {
+
         currentSlide = 0;
+
     }
 
-    if (currentSlide < 0) {
-        currentSlide = photoList.length - 1;
+
+    if (
+        currentSlide < 0
+    ) {
+
+        currentSlide =
+            photoList.length - 1;
+
     }
+
 
     showPhoto();
 
 }
 
 
+/* INITIALIZE */
+
 createPhotoDots();
+
 showPhoto();
 
+
+/* AUTO SLIDESHOW */
 
 setInterval(() => {
 
     const memoriesPage =
-        document.getElementById("memoriesPage");
+        document.getElementById(
+            "memoriesPage"
+        );
 
-    if (memoriesPage.classList.contains("active")) {
+
+    if (
+        memoriesPage.classList.contains(
+            "active"
+        )
+    ) {
 
         changePhoto(1);
 
@@ -1720,44 +3091,70 @@ setInterval(() => {
 }, 3000);
 
 
-/* =========================
+/* =====================================================
    PARTICLES
-========================= */
+===================================================== */
 
 function createParticles() {
 
     document
-    .querySelectorAll(".particle")
-    .forEach(p => p.remove());
+        .querySelectorAll(
+            ".particle"
+        )
+        .forEach(
+            p => p.remove()
+        );
 
-    for (let i = 0; i < 35; i++) {
+
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
 
         const particle =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        particle.className = "particle";
+
+        particle.className =
+            "particle";
+
 
         particle.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() *
+            100 +
+            "vw";
+
 
         particle.style.top =
-            Math.random() * 100 + "vh";
+            Math.random() *
+            100 +
+            "vh";
+
 
         particle.style.animationDelay =
-            Math.random() * 2 + "s";
+            Math.random() *
+            2 +
+            "s";
 
-        document.body.appendChild(particle);
+
+        document.body.appendChild(
+            particle
+        );
 
     }
 
 }
 
+
 createParticles();
 
 
-/* =========================
+/* =====================================================
    RESTART
-========================= */
+===================================================== */
 
 function restartSurprise() {
 
