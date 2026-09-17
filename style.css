@@ -1932,3 +1932,43 @@ body::before {
         font-size: 18px;
     }
 }
+/* ✨ Premium Cake Sparkles */
+
+.cake-sparkle {
+    position: absolute;
+
+    color: #ffd76a;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    text-shadow:
+        0 0 5px #ffd76a,
+        0 0 12px #ff9d00;
+
+    animation:
+        cakeSparkle 1.8s ease-out forwards;
+}
+
+@keyframes cakeSparkle {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-35px)
+            scale(0.2);
+    }
+}
