@@ -1660,7 +1660,7 @@ body::before {
 }
 /* 📸 Bigger Memories Photo - Mobile */
 .photo-slideshow {
-    width: 92%;
+    width: 96%;
     max-width: 500px;
     margin: 25px auto;
 }
@@ -1678,7 +1678,7 @@ body::before {
 @media (max-width: 600px) {
 
     .photo-slideshow {
-        width: 92%;
+        width: 96%;
         margin: 25px auto;
     }
 
