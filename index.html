@@ -452,17 +452,32 @@
 
 <div class="photo-slideshow">
 
+    <button class="photo-arrow left-arrow"
+            onclick="changePhoto(-1)">
+        ‹
+    </button>
+
     <img id="slideshowImage"
-         src="images/1.jpeg"
+         src="1.jpeg"
          alt="Our Memory">
+
+    <button class="photo-arrow right-arrow"
+            onclick="changePhoto(1)">
+        ›
+    </button>
 
     <div class="slide-number">
         <span id="currentPhoto">1</span> / 16
     </div>
 
     <p id="memoryCaption">
-        Your beautiful Memories ❤️
+        A beautiful memory with you ❤️
     </p>
+
+    <button class="change-photo-btn"
+            onclick="changePhoto(1)">
+        🖼️ Change Photo
+    </button>
 
 </div>
 
